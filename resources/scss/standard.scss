@@ -1,0 +1,221 @@
+@import 'bourbon/bourbon';
+@import 'normalize';
+@import 'settings';
+@import 'fonts';
+@import 'animations';
+
+@import 'components/button';
+@import 'components/icons';
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+	background-image:url('http://subtlepatterns.com/patterns/confectionary.png');
+}
+
+.b-standard {
+	color:#fff;
+	background-color:$secondary-color;
+	width:300px;
+	height:250px;
+	border-radius:20px;
+	cursor:pointer;
+	
+	// centering into the screen
+	position:absolute;
+	top:50%;
+	left:50%;
+	@include transform(translateX(-50%) translateY(-50%) translateZ(0));
+
+
+	.headline {
+		color:#fff;
+		display:inline-block;
+		font-size:36px;
+		position:absolute;
+		bottom:30px;
+		left:20px;
+		color:$primary-color;
+		font-family:'built_titling_bd';
+	}
+
+	.content {
+		color:#fff;
+		font-size:30px;
+		padding:0;
+		margin:0;
+		display:inline-block;
+		position:absolute;
+		bottom:20px;
+		left:20px;
+		letter-spacing:2px;
+		color:$text-color;
+		font-family:'built_titling_el';
+	}
+
+	.demo {
+		position:absolute;
+		right:20px;
+		bottom:20px;
+		width:70px;
+		height:70px;
+		border-radius:50%;
+		line-height:70px;
+		letter-spacing:2px;
+		font-family:'built_titling_bd';
+		text-align:center;
+		background-color:$primary-color;
+		@include animation(pulsate .7s);
+		@include animation-direction(alternate);
+		@include animation-iteration-count(infinite);
+		@include animation-fill-mode(backwards);
+	}
+
+	.bheadline {
+		color:$text-color;
+		font-size:22px;
+		letter-spacing:4px;
+		font-family:'built_titling_el';
+		display:inline-block;
+		text-style:normal;
+
+		&:after, &:before {
+			content:'';
+			height:1px;
+			width:10px;
+			margin:0 10px;
+			background-color:$text-color;
+			display:inline-block;
+			vertical-align:middle;
+
+		}
+	}
+
+	.description {
+		color:$text-color;
+
+		code {
+			margin-top:10px;
+			display:inline-block;
+			padding:4px 10px;
+			border-radius:2px;
+			color:white;
+			background-color:rgba($text-color, .5);
+		}
+	}
+
+	.start, .middle, .end {
+		position:absolute;
+		left:20px;
+		right:20px;
+		top:20px;
+		text-align:center;
+
+		@include animation(hide .8s);
+		@include animation-direction(normal);
+		@include animation-fill-mode(forwards);
+	}
+
+	.start {
+		@include animation-delay(3s);
+
+		&.replay {
+			opacity:0;
+			@include animation(replay .8s);
+			@include animation-direction(normal);
+			@include animation-delay(2.2s);
+			@include animation-fill-mode(forwards);
+		}
+
+		.bheadline {
+			opacity:0;
+			@include animation(showItem .8s);
+			@include animation-direction(normal);
+			@include animation-fill-mode(forwards);
+		}
+
+		.technologies {
+			margin:20px 0 0 0;
+			padding:0;
+			text-align:left;
+			color:$text-color;
+			list-style:none;
+			font-size:14px;
+			letter-spacing:4px;
+			font-family:'built_titling_bd';
+			
+			li {
+				opacity:0;
+				@include animation(showItem .8s);
+				@include animation-direction(normal);
+				@include animation-fill-mode(forwards);
+
+				&:not(:last-child) {
+					margin-bottom:5px;
+				}
+
+				&.icon-html5 {
+					@include animation-delay(.2s);
+				}
+
+				&.icon-css3 {
+					@include animation-delay(.4s);
+				}
+
+				&.icon-code {
+					@include animation-delay(.6s);
+				}
+			}
+
+			li:not(:last-child) {
+				margin-bottom:5px;
+			}
+		}
+	}
+
+	.middle {
+		@include animation-delay(6s);
+		
+		.bheadline {
+			opacity:0;
+			@include animation(showItem .8s);
+			@include animation-direction(normal);
+			@include animation-fill-mode(forwards);
+			@include animation-delay(3s);
+		}
+
+		.description {
+			opacity:0;
+			@include animation(showItem .8s);
+			@include animation-direction(normal);
+			@include animation-fill-mode(forwards);
+			@include animation-delay(3.2s);
+		}
+	}
+
+	.end {
+		@include animation-delay(8s);
+
+		.bheadline {
+			opacity:0;
+			@include animation(showItem .8s);
+			@include animation-direction(normal);
+			@include animation-fill-mode(forwards);
+			@include animation-delay(6s);
+		}
+
+		.description {
+			opacity:0;
+			@include animation(showItem .8s);
+			@include animation-direction(normal);
+			@include animation-fill-mode(forwards);
+			@include animation-delay(6.2s);
+		}
+	}
+}

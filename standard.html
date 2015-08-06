@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Standard</title>
+	<link rel="stylesheet" href="public/css/standard.css" />
+</head>
+<body>
+	<!--
+		data-landing: this attribute holds redirect URL; 
+		if empty, clickTag will be used.
+	//-->
+	<script>var clickTag = 'http://google.ro/';</script>
+
+	<div class="b-standard" data-landing="">
+		<div class="start" data-scene="stick" data-type="scene">
+			<strong class="bheadline">Made using</strong>
+			<ol class="technologies">
+				<li class="icon-html5">HTML5</li>
+				<li class="icon-css3">CSS3</li>
+				<li class="icon-code">Zepto JS</li>
+			</ol>
+		</div>
+
+		<div class="middle" data-type="scene">
+			<strong class="bheadline">Sticky scenes</strong>
+			<p class="description">Stick to scene with<br /> <code>data-scene="stick"</code></p>
+		</div>
+
+		<div class="end" data-type="scene">
+			<strong class="bheadline">Animation lifetime</strong>
+			<p class="description" data-type="return">Custom events via <br /> <code>animationend</code></p>
+		</div>
+
+		<div class="demo">DEMO</div>
+
+		<h1 class="headline">The Square</h1>
+		<p class="content">HTML5 AD Example</p>
+	</div>
+
+	<script src='http://cdnjs.cloudflare.com/ajax/libs/zepto/1.1.6/zepto.min.js'></script>
+	<script src='public/js/standard.js'></script>
+</body>
+</html>

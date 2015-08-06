@@ -1,0 +1,31 @@
+{
+  "name": "html5-ad",
+  "version": "1.0.0",
+  "description": "How i’ve made an ad with HTML5, CSS3 & ZeptoJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ad",
+    "html5",
+    "zepto",
+    "css3"
+  ],
+  "author": "Constantin Angheloiu <constantin.angheloiu@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-if": "^1.2.5",
+    "gulp-jshint": "^1.11.2",
+    "gulp-plumber": "^1.0.1",
+    "gulp-ruby-sass": "^1.0.5",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-uglify": "^1.2.0",
+    "gulp-util": "^3.0.6",
+    "jshint-stylish": "^2.0.1",
+    "sprity": "^1.0.7",
+    "sprity-sass": "^1.0.4"
+  }
+}
